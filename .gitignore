@@ -1,0 +1,6 @@
+#ignora archivos ocultos
+.*
+~*
+
+#pero has track del gitignore
+!.gitignore
