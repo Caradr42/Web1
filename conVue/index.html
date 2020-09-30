@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>  
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Curricula</title>
+
+    <!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/grid/">
+	<!-- Si utilizamos componentes de Bootstrap que requieran Javascript agregar estos tres archivos -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- VueJs -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<!-- Custom stlylesheet -->
+	<!-- <link type="text/css" rel="stylesheet" href="css/style.css" /> -->  
+</head>
+
+<body>
+    <div class="container" id="curriculum">
+        <nav class="navbar fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="#curriculum">Curriculum</a>
+        <a class="navbar-brand" href="#other">File</a>
+        </nav>
+    </div>
+
+    <div class="container" style="background-color:#aaa3"> 
+        <hr></hr>
+        <hr></hr>
+        <hr></hr>
+    </div>
+    
+    <hr>
+
+    <!-- <div class="container-fluid" id="Ancla">
+        <div class="row">
+            <div class="col" style="background-color:rgb(151, 211, 235)">Contenedor Fluid</div>
+        </div>
+    </div> -->
+
+
+    <div id="app" class="container"> 
+        <h1 class="display-2" style="color:#111">Curriculum</h1> 
+
+        <p>{{message}}</p>
+
+        <p></p>
+        <div class="row">
+            <div class="col-md-12"  style="background-color:#111">
+                <p></p>
+                <h1 class="display-4" style="color:#DDD">Carlos Adrián Guerra Vázquez</h1> 
+                <p></p>
+            </div>
+
+            <div class="col-md-5"  style="background-color:#ccc">
+                <h2>Contact</h2>
+                <p>carlosAdr2gv@gmail.com</p> 
+                <p>https://github.com/Caradr42</p>
+                <p>(+52 1) 8186587810 </p>
+                <p>​https://www.linkedin.com/in/carlosadrianguerra/</p>
+            </div> 
+
+            <div class="col-md-7"  style="background-color:#ccc">
+                <div class="row">
+                    <div class="col-md-12"  style="background-color:#bbb">
+                        <h2>Education</h2> 
+                        <p>Instituto Tecnológico de Estudios Superiores de Monterrey (ITESM)
+                            Bachelor of Science in Computer Science and Technology Engineering (ITC)
+                            3rd year student. 
+                            Cumulative GPA: 91.8/100</p>
+                    </div>
+                    <div class="col-md-12"  style="background-color:#bbb">
+                        <h2>Spoken Languages</h2> 
+                        <p>Spanish (Native)</p> <p>English (Proficient)</p>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        
+      
+        <div class="row">
+            <div class="col-md-12"  style="background-color:#aaa">
+                <h2>Awards & Events</h2>
+            </div>
+
+            <div class="container"> 
+                <div class="row">
+
+                    <div class="col-md-6"  style="background-color:#aaa">
+                        <h5>March 2016</h5> 
+                        <p>Torneo Mexicano de Robótica (TMR) 2016. Best Technical Design award.</p>
+                        <p>
+                            Role:​ Lead programmer and designer of the main robot using Arduino and AVR ATmega
+                            microcontrollers using C in ATMEL studio. Designed the PCB for electric supply and Servo Motor
+                            driver. Mechanical design.</p>
+                    </div>
+                    <div class="col-md-6"  style="background-color:#aaa">
+                        <h5>July 2015</h5> 
+                        <p>International Competition:​ RoboCup Junior 2015(Hefei, China) Dance Secondary team of the year (1° place).</p>
+                        <p>Team development of a dancing robot and performance for an international competition.
+                            Role​: Lead programmer and designer of the main robot using Arduino. Designed PCB for electric
+                            supply and Servo Motor driver. Mechanical design.</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <div class="row">
+            <div class="col-md-12"  style="background-color:#bbb">
+                <h2>Technical Skills</h2>
+            </div>
+
+            <div class="container"> 
+                <div class="row">
+
+                    <div v-for="e in skills" class="col-md-2"  style="background-color:#bbb">
+                        <h5>{{e.name}}</h5>
+
+                        <p v-for="c in e.cont">{{c}}</p>
+                    </div>
+                    
+                </div>
+            </div>    
+        </div>
+    
+        <hr>
+        <p></p>
+        <h1 id="other"> File</h1>
+        <p></p>
+    
+        <div class="row" >
+            <div class="col-sm-12"  style="background-color:#aaa">
+                <p></p>
+                <p style="font-size:20px ;"><a href="https://drive.google.com/file/d/1G1X_FZ-OtF5iwnIm-n4OSS1ZaqWILmQp/view?usp=sharing">Descargar PDF</a></p> 
+                
+            </div>
+            <div class="col-sm-12">
+                <img src="curr.jpg" alt="curriculum file" > 
+            </div>
+        </div>       
+
+        <hr>
+    </div>
+
+</body>
+
+<script src="app.js"> </script>
+
+</html>
