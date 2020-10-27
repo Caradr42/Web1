@@ -6,14 +6,22 @@ router.get('/', (req, res, next) => {
     res.render('home');
 });
 
-router.get('/potato', (req, res, next) => {
+router.get('/home', (req, res, next) => {
     res.render('home');
+});
+
+router.get('/cv', (req, res, next) => {
+    res.render('cv');
+});
+
+router.get('/hobbies', (req, res, next) => {
+    res.render('hobbies');
 });
 
 /*
 
 router.get('/hobbys', (req, res, next) => {
-    res.render('hobbys');
+    res.render('hobbies');
 });
 
 

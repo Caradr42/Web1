@@ -25,15 +25,15 @@
 
 <body>
     {{!-- Navbar layout --}}
-    <div class="container" id="curriculum">
-        <nav class="navbar fixed-top navbar-light bg-light">
+    {{!-- <div class="container" id="curriculum"> --}}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         {{!-- <a class="navbar-brand" href="#curriculum">Curriculum</a>
         <a class="navbar-brand" href="#other">File</a> --}}
-        <a class="navbar-brand" href="#home">Home</a>
-        <a class="navbar-brand" href="#cv">CV</a>
-        <a class="navbar-brand" href="#hobbies">Hobbies</a>
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="nav-link" href="cv">CV</a>
+        <a class="nav-link" href="hobbies">Hobbies</a>
         </nav>
-    </div>
+    {{!-- </div> --}}
     
     <div class="container" id="a">
         {{{body}}}
