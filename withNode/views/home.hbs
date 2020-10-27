@@ -1,1 +1,51 @@
-<h1>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa</h1>
+<div id="app" class="container"> 
+        <h1 class="display-2" style="color:#111">Carlos Adrián Guerra Vázquez</h1> 
+        
+        <hr>
+
+        <div class="row"> 
+            {{#each homeFields}}
+                <div class="col-md-8  "  style="border-radius: 20px;">
+                    <h1>{{title}}</h1>
+                    <p></p>
+                    {{#each content}}
+                        <p>{{this}}</p>
+                    {{/each}}
+                </div> 
+                <div class="col-md-4  "  >
+                    <img src="{{imgURL}}" class="img-fluid " style="border-radius: 15px;"> 
+                </div>
+            {{/each}}
+        </div>  
+
+        <p></p>
+        <div class="row align-items-center" style="background-color:#111; border-radius: 9px;">
+            <div class="col-md-3 text-center " >
+                <p></p>
+                <a href="https://github.com/Caradr42"><button type="button"  class="btn btn-light">Github</button></a>
+                <p></p>
+            </div>
+            <div class="col-md-3 text-center " >
+                <p></p>
+                <a href="https://www.linkedin.com/in/carlosadrianguerra/"><button type="button"  class="btn btn-light">LinkedIn</button></a>
+                <p></p>
+            </div>
+            <div class="col-md-3 text-center " >
+                <p></p>
+                <a href="https://www.instagram.com/caradr9/"><button type="button"  class="btn btn-light">Instagram</button></a>
+                <p></p>
+            </div>
+            <div class="col-md-3 text-center " >
+                <p></p>
+                <a href="https://drive.google.com/file/d/1G1X_FZ-OtF5iwnIm-n4OSS1ZaqWILmQp/view?usp=sharing"><button type="button"  class="btn btn-light">CV download</button></a>
+                <p></p>
+            </div>
+            
+        </div> 
+
+            
+    </div>
+
+</body>
+
+{{!-- <script src="cv.js"> </script> --}}

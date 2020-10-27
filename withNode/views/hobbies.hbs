@@ -1,1 +1,32 @@
-<h1>Hobbies</h1>
+<div id="app" class="container"> 
+        <h1 class="display-2" style="color:#111">Hobbies</h1> 
+        
+        <hr>
+
+        <div class="row"> 
+            {{#each hbFields}}
+                <div class="col-md-8  "  style="border-radius: 20px; ">
+                    <h1 >{{title}}</h1>
+                    <p></p>
+                    {{#each content}}
+                        <p>{{this}}</p>
+                    {{/each}}
+                </div> 
+                <div class="col-md-4  "  >
+                    <img src="{{imgURL}}" class="img-fluid " style="border-radius: 15px; margin-top:20px;"> 
+                </div>
+            {{/each}}
+        </div>  
+
+        <p></p>
+        <div class="col-md-12" style="color:#111; background-color:#111; border-radius: 9px;">
+            <p>Hidden text</p>
+            <p>UwU</p>
+        </div> 
+
+            
+    </div>
+
+</body>
+
+{{!-- <script src="cv.js"> </script> --}}

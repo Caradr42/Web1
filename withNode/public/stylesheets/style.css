@@ -1,4 +1,8 @@
 body { 
-    /* padding-top: 65px;  */
+    padding-top: 65px; 
     background-color: rgb(240, 234, 227);
+}
+
+.rounded {
+    border-radius: 50px;
 }

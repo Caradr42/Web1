@@ -1,1 +1,53 @@
-<h1>CV</h1>
+<div id="app" class="container"> 
+        <h1 class="display-2" style="color:#111">Curriculum</h1> 
+
+        {{!-- <p>{{message}}</p> --}}
+
+        <p></p>
+        <div class="row align-items-center" style="background-color:#111; border-radius: 9px;">
+            <div class="col-md-9"  >
+                <p></p>
+                <h1 class="display-4" style="color:#DDD">Carlos Adrián Guerra Vázquez</h1> 
+                <p></p>
+            </div>
+            <div class="col-md-3 text-center " >
+                <p></p>
+                <a href="#cvDownload"><button type="button"  class="btn btn-light">Go to File</button></a>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="row"> 
+            {{#each cvFields}}
+                <div class="col-md-12  "  style="background-color:{{setColor @index}}; border: 2px solid #704432; border-radius: 20px; margin-top:20px">
+                    <h2>{{title}}</h2>
+                    {{#each content}}
+                        <p>{{this}}</p>
+                    {{/each}}
+                </div> 
+            {{/each}}
+        </div>        
+    
+        <hr>
+        <p id="cvDownload"></p>
+        <h1 id="other"> File</h1>
+        <p></p>
+    
+        <div class="row" >
+            <div class="col-sm-12 text-center align-items-center"  style="background-color:#aaa; border-radius: 10px;">
+                <p></p>
+                <a href="https://drive.google.com/file/d/1G1X_FZ-OtF5iwnIm-n4OSS1ZaqWILmQp/view?usp=sharing"><button type="button" class="btn btn-info" >Download PDF</button></a>
+                {{!-- <p style="font-size:20px; color:aqua"><a href="https://drive.google.com/file/d/1G1X_FZ-OtF5iwnIm-n4OSS1ZaqWILmQp/view?usp=sharing">Download PDF</a></p>  --}}
+                <p></p>
+            </div>
+            <div class="col-sm-12 align-items-center text-center">
+                <img src="curr.jpg" class="img-fluid" alt="curriculum file" > 
+            </div>
+        </div>       
+
+        <hr>
+    </div>
+
+</body>
+
+{{!-- <script src="cv.js"> </script> --}}
